@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,3 +25,10 @@ Route::get('/home', 'HomeController@index')->name('home');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::group(["middleware" => "verify2fa"], function () {
+    Route::get('/verify', 'VerifyController@show')->name('verify');
+    Route::post('/verify', 'VerifyController@verify')->name('verify');
+    Route::get('/resend', 'VerifyController@resend')->name('resend');
+});

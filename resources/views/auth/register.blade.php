@@ -44,6 +44,7 @@
 
                             <div class="col-md-6">
                                 <input id="phone_number" type="tel" class="form-control @error('phone_number') is-invalid @enderror" phone_number="phone_number"
+                                    name="phone_number"
                                     value="{{ old('phone_number') }}"
                                     autocomplete="phone_number" autofocus>
 
