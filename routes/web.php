@@ -18,11 +18,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
+Auth::routes(['verify' => true]); /*Activando la verificación de correo*
 
 Route::get('/home', 'HomeController@index')->name('home');
 

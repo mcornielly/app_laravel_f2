@@ -1,0 +1,55 @@
+
+body
+{
+    background-color: #e1e2e6;
+}
+
+.navbar-brand img {
+    height: 36px;
+}
+
+.pad-top {
+    padding-top: 5% !important;
+}
+
+.logo-login {
+    padding-top: 30px;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+
+    img {
+        height: 80px !important;
+    }
+}
+
+.box-card {
+    padding-top: 25px !important;
+}
+
+.title-header {
+    margin-left: 20px;
+    font-size: 25px;
+    font-weight: 900;
+    color: #0a0a0a;
+}
+
+a.btn-link {
+    font-weight: bold;
+    color: #3269dd;
+}
+
+button.btn-color {
+    background-color: #3269dd !important;
+    color: #fff !important;
+    font-weight: 700;
+
+    &:hover {
+        background-color: #e1e2e6 !important;
+        color: #3269dd !important;
+    }
+}
+
+
+
