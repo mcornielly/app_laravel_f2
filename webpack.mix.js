@@ -11,5 +11,16 @@ const mix = require('laravel-mix');
  |
  */
 
+mix.disableNotifications();
+
 mix.js('resources/js/app.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css');
+
+
+mix.browserSync({
+    proxy: 'http://app_laravel_f2.test',
+    port: 3015,
+    // browser: 'firefox'
+    browser: 'C:\\Program Files\\Firefox Developer Edition\\firefox.exe',//Firefox Developer
+    // open: false
+});

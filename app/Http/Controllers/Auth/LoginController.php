@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
+use Carbon\Carbon;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Http\Request;
@@ -73,6 +74,11 @@ class LoginController extends Controller
 
             $request->session()->put('verify:user:id', $user->id);
             $request->session()->put('verify:user:phone_number', $user->phone_number);
+
+            if ($user->email_verified_at == null) {
+                $user->email_verified_at = Carbon::now();
+                $user->save();
+            }
 
             // $request = new \Vonage\Verify\Request(NUMBER, "Wehaa");
             // $response = $client->verify()->start($request);
