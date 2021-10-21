@@ -43,6 +43,7 @@
                             <label for="phone_number" class="col-md-4 col-form-label text-md-right">Número de Teléfono</label>
 
                             <div class="col-md-6">
+                                {{-- <input type="tel" id="phone"> --}}
                                 <input id="phone_number" type="tel" class="form-control @error('phone_number') is-invalid @enderror" phone_number="phone_number"
                                     name="phone_number"
                                     value="{{ old('phone_number') }}"
@@ -92,3 +93,30 @@
     </div>
 </div>
 @endsection
+
+<script>
+    var input = document.querySelector("#phone");
+    window.intlTelInput(input, {
+      // allowDropdown: false,
+      // autoHideDialCode: false,
+      // autoPlaceholder: "off",
+      // dropdownContainer: document.body,
+      // excludeCountries: ["us"],
+      // formatOnDisplay: false,
+      // geoIpLookup: function(callback) {
+      //   $.get("http://ipinfo.io", function() {}, "jsonp").always(function(resp) {
+      //     var countryCode = (resp && resp.country) ? resp.country : "";
+      //     callback(countryCode);
+      //   });
+      // },
+      // hiddenInput: "full_number",
+      // initialCountry: "auto",
+      // localizedCountries: { 'de': 'Deutschland' },
+      // nationalMode: false,
+      onlyCountries: ['us', 'ca', 've', 'co', 'do'],
+      // placeholderNumberType: "MOBILE",
+      // preferredCountries: ['cn', 'jp'],
+      // separateDialCode: true,
+      utilsScript: "build/js/utils.js",
+    });
+  </script>
