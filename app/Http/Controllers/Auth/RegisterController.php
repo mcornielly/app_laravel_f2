@@ -82,12 +82,13 @@ class RegisterController extends Controller
      * @return \Illuminate\Http\Response
      *
      */
-    // public function register(Request $request)
-    // {
-    //     $this->validator($request->all())->validate();
+    public function register(Request $request)
+    {
+        $this->validator($request->all())->validate();
 
-    //     event(new Registered($user = $this->create($request->all())));
+        event(new Registered($user = $this->create($request->all())));
 
-    //     // return redirect()->route('login')->with("message", ["success", "Bienvenido a la App"]);
-    // }
+        // return redirect()->route('login')->with("message", ["success", "Bienvenido a la App"]);
+        return view('auth.verify');
+    }
 }
