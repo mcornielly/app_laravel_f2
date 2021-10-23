@@ -10,6 +10,7 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
     <link rel="shortcut icon" href="{{ asset('img/wehaa_favi.png') }}" type="image/x-icon">
     <!-- Scripts -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
     <script src="{{ asset('js/app.js') }}" defer></script>
     <script src="{{ asset('js/build/intlTelInput.js') }}"></script>
 
@@ -19,8 +20,8 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('build/css/intlTelInput.css')}}">
-    <link rel="stylesheet" href="{{ asset('build/css/demo.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/build/intlTelInput.css')}}">
+    {{-- <link rel="stylesheet" href="{{ asset('css/build/demo.css') }}"> --}}
 </head>
 <body>
     <div id="app">
@@ -76,8 +77,10 @@
         </nav>
 
         <main class="py-4">
-            @component('components.alert')@endcomponent
-            @yield('content')
+            <div class="container">
+                @component('components.alert')@endcomponent
+                @yield('content')
+            </div>
         </main>
     </div>
 </body>

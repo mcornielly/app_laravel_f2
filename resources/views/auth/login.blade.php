@@ -2,13 +2,9 @@
 
 @section('content')
 <div class="container">
-    <div class="row justify-content-center pad-top">
+    <div class="row justify-content-center">
+        @component('components.logo')@endcomponent
         <div class="col-md-5">
-            <div class="col-md-12">
-                <div class="logo-login ">
-                    <img src="{{ asset('img/wehaa_logo.png') }}" alt="Sing in Wehaa">
-                </div>
-            </div>
             <div class="box-card shadow-sm p-3 mb-5 bg-white rounded">
                 <div class="title-header">Sing in</div>
 

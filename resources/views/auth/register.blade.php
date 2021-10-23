@@ -3,6 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
+        @component('components.logo')@endcomponent
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('Register') }}</div>
@@ -95,28 +96,34 @@
 @endsection
 
 <script>
-    var input = document.querySelector("#phone");
-    window.intlTelInput(input, {
-      // allowDropdown: false,
-      // autoHideDialCode: false,
-      // autoPlaceholder: "off",
-      // dropdownContainer: document.body,
-      // excludeCountries: ["us"],
-      // formatOnDisplay: false,
-      // geoIpLookup: function(callback) {
-      //   $.get("http://ipinfo.io", function() {}, "jsonp").always(function(resp) {
-      //     var countryCode = (resp && resp.country) ? resp.country : "";
-      //     callback(countryCode);
-      //   });
-      // },
-      // hiddenInput: "full_number",
-      // initialCountry: "auto",
-      // localizedCountries: { 'de': 'Deutschland' },
-      // nationalMode: false,
-      onlyCountries: ['us', 'ca', 've', 'co', 'do'],
-      // placeholderNumberType: "MOBILE",
-      // preferredCountries: ['cn', 'jp'],
-      // separateDialCode: true,
-      utilsScript: "build/js/utils.js",
+    $(document).ready(function() {
+        $('#phone').intlTelInput({
+            container: 'body',
+            utilsScript: "https://rawgit.com/Bluefieldscom/intl-tel-input/master/lib/libphonenumber/build/utils.js"
+        });
     });
+    // var input = document.querySelector("#phone");
+    // window.intlTelInput(input, {
+    //   // allowDropdown: false,
+    //   // autoHideDialCode: false,
+    //   // autoPlaceholder: "off",
+    //   // dropdownContainer: document.body,
+    //   // excludeCountries: ["us"],
+    //   // formatOnDisplay: false,
+    //   // geoIpLookup: function(callback) {
+    //   //   $.get("http://ipinfo.io", function() {}, "jsonp").always(function(resp) {
+    //   //     var countryCode = (resp && resp.country) ? resp.country : "";
+    //   //     callback(countryCode);
+    //   //   });
+    //   // },
+    //   // hiddenInput: "full_number",
+    //   // initialCountry: "auto",
+    //   // localizedCountries: { 'de': 'Deutschland' },
+    //   // nationalMode: false,
+    //   onlyCountries: ['us', 'ca', 've', 'co', 'do'],
+    //   // placeholderNumberType: "MOBILE",
+    //   // preferredCountries: ['cn', 'jp'],
+    //   // separateDialCode: true,
+    //   utilsScript: "build/js/utils.js",
+    // });
   </script>

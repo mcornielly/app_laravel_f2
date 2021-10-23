@@ -3,6 +3,7 @@
 @section('content')
     <div class="container">
         <div class="row justify-content-center">
+        @component('components.logo')@endcomponent
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-header">{{ __('Confirma el código telefónico') }}</div>
