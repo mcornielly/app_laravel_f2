@@ -22,9 +22,9 @@ Auth::routes(['verify' => true]); /*Activando la verificación de correo*/
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('/verify', 'VerifyController@show')->name('verify');
 
 Route::group(["middleware" => 'verify2fa'], function () {
-    Route::get('/verify', 'VerifyController@show')->name('verify');
     Route::post('/verify', 'VerifyController@verify')->name('verify');
     Route::get('/resend', 'VerifyController@resend')->name('resend');
 });

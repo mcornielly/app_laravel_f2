@@ -8,6 +8,15 @@ body
     height: 36px;
 }
 
+.justify-content-center {
+    padding-top: 5%;
+}
+
+.card-img {
+    max-width: 100%;
+    height: 322px;
+}
+
 .pad-top {
     padding-top: 5% !important;
 }
@@ -30,7 +39,7 @@ body
 
 .title-header {
     margin-left: 20px;
-    font-size: 25px;
+    font-size: 22px;
     font-weight: 900;
     color: #0a0a0a;
 }

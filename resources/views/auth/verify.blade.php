@@ -5,8 +5,8 @@
     <div class="row justify-content-center">
         @component('components.logo')@endcomponent
         <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Verify Your Email Address') }}</div>
+            <div class="box-card shadow-sm p-3 mb-5 bg-white rounded">
+                <div class="title-header">{{ __('Verify Your Email Address') }}</div>
 
                 <div class="card-body">
                     @if (session('resent'))

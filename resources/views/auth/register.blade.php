@@ -5,8 +5,8 @@
     <div class="row justify-content-center">
         @component('components.logo')@endcomponent
         <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
+            <div class="box-card shadow-sm p-3 mb-5 bg-white rounded">
+                <div class="title-header">{{ __('Register') }}</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
@@ -82,7 +82,7 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-color btn-block">
                                     {{ __('Register') }}
                                 </button>
                             </div>
