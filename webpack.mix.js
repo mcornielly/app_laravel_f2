@@ -11,12 +11,12 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.disableNotifications();
 
 mix.js('resources/js/app.js', 'public/js')
-    .sass('resources/sass/app.scss', 'public/css');
+.sass('resources/sass/app.scss', 'public/css');
 
 
+mix.disableNotifications();
 mix.browserSync({
     proxy: 'http://app_laravel_f2.test',
     port: 3015,
